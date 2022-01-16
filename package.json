@@ -1,0 +1,25 @@
+{
+  "name": "maru-yen",
+  "version": "0.0.1",
+  "description": "A Cryptocurrency for the Maru Platform",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "node scripts/deploy.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brycemiller/maru-yen.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/brycemiller/maru-yen/issues"
+  },
+  "homepage": "https://github.com/brycemiller/maru-yen#readme",
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.4.2",
+    "@solana/solidity": "^0.0.18",
+    "@solana/web3.js": "^1.31.0"
+  }
+}
