@@ -4,7 +4,9 @@
   "description": "A Cryptocurrency for the Maru Platform",
   "main": "index.js",
   "scripts": {
-    "deploy": "node scripts/deploy.js",
+    "deploy:local": "node scripts/deploy.js --network=local",
+    "deploy:dev": "node scripts/deploy.js --network=dev",
+    "deploy:test": "node scripts/deploy.js --network=test",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +22,7 @@
   "dependencies": {
     "@openzeppelin/contracts": "^4.4.2",
     "@solana/solidity": "^0.0.18",
-    "@solana/web3.js": "^1.31.0"
+    "@solana/web3.js": "^1.31.0",
+    "yargs": "^17.3.1"
   }
 }
