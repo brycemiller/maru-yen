@@ -7,7 +7,9 @@
     "deploy:local": "node scripts/deploy.js --network=local",
     "deploy:dev": "node scripts/deploy.js --network=dev",
     "deploy:test": "node scripts/deploy.js --network=test",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "checkBalance:local": "node scripts/checkBalance.js --network=local",
+    "checkBalance:dev": "node scripts/checkBalance.js --network=dev",
+    "checkBalance:test": "node scripts/checkBalance.js --network=test"
   },
   "repository": {
     "type": "git",
