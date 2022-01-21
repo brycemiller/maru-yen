@@ -8,4 +8,8 @@ contract MaruYen is ERC20 {
     constructor() ERC20("MaruYen", "MARY") {
         _mint(msg.sender, 10000 * 10 ** decimals());
     }
+
+    function decimals() public view override returns (uint8) {
+        return 0;
+    }
 }
