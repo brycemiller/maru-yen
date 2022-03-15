@@ -26,8 +26,8 @@ const main = async (network, abi, secret) => {
     const loadParams = ((network, abi, secretKey) => {
         return ({
             connection: connect(network),
-            programID: "4zcfhLgJa5MNPQbpeb57QGb6rVNFD7EffsNE6WpoPiGX",
-            storageID: new PublicKey("2Bp7Xv6HesVkX7vTRbPzk3FixoWzQPAREvK5mKiEEsQB"),
+            programID: "Gu545SJX88HpmKMQZxhbWCLDrjGC7N5gaApD2GTys4ZQ",
+            storageID: new PublicKey("FHtdhVvcgu2BkJPF1Z4PLGXxBtkJKLk8TJkpjyrS1Bix"),
             abi: abi,
             payer: Keypair.fromSecretKey(new Uint8Array(secretKey)),
         });

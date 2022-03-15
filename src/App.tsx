@@ -1,26 +1,14 @@
-import React from 'react';
-import logo from './logo.svg';
+import { FC } from 'react';
+import { MaruYenBalance } from './components/balance/MaruYenBalance';
+import { SolanaBalance } from './components/balance/SolanaBalance';
+import { Wallet } from './components/wallet/Wallet';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export const App: FC = () => (
+  <Wallet>
+    <SolanaBalance />
+    <MaruYenBalance />
+  </Wallet>
+);
 
 export default App;
