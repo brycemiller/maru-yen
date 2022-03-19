@@ -1,7 +1,7 @@
 import { Contract } from '@solana/solidity';
 import { clusterApiUrl, Connection, Keypair, PublicKey } from '@solana/web3.js';
 import { useMemo } from 'react';
-import config from "../config.json";
+import config from "../../contract.config.json";
 
 const MARUYEN_ABI = require("../contracts/MaruYen.abi.json");
 const SECRET_KEY = require( "../../id.json");
