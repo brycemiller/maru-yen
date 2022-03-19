@@ -5,6 +5,7 @@ const { connect, lowerBound } = require("./utils");
 const { readFileSync } = require("fs");
 const yargs = require("yargs");
 
+const CONTRACT = JSON.parse(readFileSync("./contract.config.json"));
 const MARUYEN_ABI = JSON.parse(readFileSync("./build/MaruYen.abi", "utf8"));
 const SECRET_KEY = JSON.parse(readFileSync("./id.json"));
 
@@ -26,8 +27,8 @@ const main = async (network, abi, secret) => {
     const loadParams = ((network, abi, secretKey) => {
         return ({
             connection: connect(network),
-            programID: "Gu545SJX88HpmKMQZxhbWCLDrjGC7N5gaApD2GTys4ZQ",
-            storageID: new PublicKey("FHtdhVvcgu2BkJPF1Z4PLGXxBtkJKLk8TJkpjyrS1Bix"),
+            programID: CONTRACT.programID,
+            storageID: new PublicKey(CONTRACT.storageID),
             abi: abi,
             payer: Keypair.fromSecretKey(new Uint8Array(secretKey)),
         });
