@@ -1,19 +1,20 @@
 import { FC, useEffect, useState } from 'react';
 import { publicKeyToHex } from '@solana/solidity';
 import { useContract } from '../../hooks/hooks';
-import { symbol } from '../../utils/maruyen';
+import { name, symbol } from '../../utils/maruyen';
 import { Balance } from './Balance';
+import { useWallet } from '@solana/wallet-adapter-react';
 
 export const MaruYenBalance: FC = () => {
-  /* @TODO Refactor to use Wallet's connection and public key */
   const [balance, setBalance] = useState(0);
-  const { contract, payer } = useContract();
+  const { publicKey } = useWallet();
+  const { contract } = useContract();
 
-  useEffect(() => payer.publicKey &&
-    contract.balanceOf(publicKeyToHex(payer.publicKey))
+  useEffect(() => publicKey &&
+    contract.balanceOf(publicKeyToHex(publicKey))
       .then((b: any) => setBalance(b.toNumber()))
-    , [contract, payer.publicKey]
+    , [contract, publicKey]
   );
 
-  return <Balance balance={balance} symbol={symbol} />;
+  return <Balance balance={balance} name={name} symbol={symbol} />;
 };

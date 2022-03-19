@@ -1,1 +1,2 @@
-export const symbol = "MARY";
+export const name="MaruYen";
+export const symbol = "丸円";

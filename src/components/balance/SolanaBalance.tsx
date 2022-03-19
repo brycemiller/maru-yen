@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from 'react';
 import { useConnection, useWallet } from '@solana/wallet-adapter-react';
-import { lamportsToSol, symbol } from '../../utils/solana';
+import { lamportsToSol, name, symbol } from '../../utils/solana';
 import { Balance } from './Balance';
 
 export const SolanaBalance: FC = () => {
@@ -14,5 +14,5 @@ export const SolanaBalance: FC = () => {
         .then(b => setBalance(lamportsToSol(b)));
   }, [connection, publicKey]);
 
-  return <Balance balance={balance} symbol={symbol} />;
+  return <Balance balance={balance} name={name} symbol={symbol} />;
 };

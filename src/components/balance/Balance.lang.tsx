@@ -1,1 +1,1 @@
-export const CURRENT_BALANCE = "Current balance:";
+export const YOUR_0_BALANCE = "Your {0} balance:";

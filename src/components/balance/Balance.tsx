@@ -1,5 +1,6 @@
 import { FC } from 'react';
-import { CURRENT_BALANCE } from './Balance.lang';
+import { lang } from '../../utils/lang';
+import { YOUR_0_BALANCE } from './Balance.lang';
 
-export const Balance: FC<Balance.IBalance> = ({ balance, symbol }) =>
-  <div>{CURRENT_BALANCE} {balance} {symbol}</div>;
+export const Balance: FC<Balance.IBalance> = ({ balance, name, symbol }) =>
+  <div>{lang(YOUR_0_BALANCE, name)} {balance} <abbr title={name}>{symbol}</abbr></div>;
