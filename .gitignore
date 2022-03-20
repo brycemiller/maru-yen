@@ -20,6 +20,7 @@
 .vscode
 
 id.json
+privateKeys.json
 solang.exe
 
 npm-debug.log*
